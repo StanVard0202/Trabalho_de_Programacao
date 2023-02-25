@@ -1,6 +1,7 @@
 :root{
     --main-color: #d9a308;
     --btn-color: #1DA1F2;
+    --tamanho: 500px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,13 +37,59 @@ h2{
     scale: 2;
 	margin-bottom:5vh;
 }
-
-
-button#darkmode{
+.toggle{
     position: absolute;
     top: 20px;
     right: 20px;
-    width: fit-content;
+    
+}
+
+.toggle input[type='checkbox'] {
+    display: none;
+}
+
+.toggle label {
+    background-color: #777;
+    border: 2px solid #555;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    width: 100px;
+    height: 50px;
+}
+
+.toggle label::after {
+    background-color: #555;
+    border-radius: 50%;
+    content: ' ';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    transition: all ease-in-out 0.3s;
+    width: 42px;
+    height: 42px;
+}
+
+.toggle input[type='checkbox']:checked ~ label {
+    background-color: #00a0fc;
+    border-color: #006dc9;
+}
+
+.toggle input[type='checkbox']:checked ~ label::after {
+    background-color: #0054b0;
+    transform: translateX(50px);
+}
+
+img.carrinho{
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    width: 50px;
+    height: 50px;
 }
 
 div.sobre_container{
@@ -54,14 +101,18 @@ div.sobre_container{
 
 div.container > p{
     width: max-content;
-    max-width: 45vw;
+}
+div.sobre_container > img{
+    border-radius: 15px;
+    height: var(--tamanho);
+    width: var(--tamanho);
 }
 
 .bar {
     margin: 0%;
     padding: 0%;
-    border-left: 5px solid var(--main-color);
-    height: 750px;
+    border-left: 2.5px solid var(--main-color);
+    height: var(--tamanho);
     margin: 10px;
 }
 
@@ -83,26 +134,38 @@ div.produto{
     border-radius: 15px;
     padding: 5px;
     height: auto;
-    width: min-content;
+    width: calc(97% / 3);
     font-size: 20px;  
+}
+
+div.produto > img:hover{
+    scale: 1.15;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+}
+
+div.produto > img{
+    position: static;
+    border-radius:  15px;
+    margin-bottom: 0px;
+    height: 500px;
+    width: 500px;
 }
 
 button.compra{
     background-color: var(--btn-color);
     border: 1px solid var(--btn-color);
     border-radius: 15px;
-    width: 750px;
+    width: 100%;
     font-size: 20px;
     overflow: hidden;
 }
 
-div.produto:hover{
-    
+button.compra:hover{
+    box-shadow: 10px 0px 10px -5px rgba(0,0,0,0.75);
 }
 
-div.produto > img{
-    position: static;
-    border: 1px solid transparent;
-    border-radius:  15px;
-    margin-bottom: 0px;
+button.compra:focus{
+    --cor:#146fac;
+    border: var(--cor);
+    background-color: var(--cor);
 }

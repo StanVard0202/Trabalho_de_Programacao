@@ -8,24 +8,19 @@ var dark_state = true
 const storage = sessionStorage
 
 let fundos = storage.getItem("fundos")
-
-let arr = [[{"img":"https://via.placeholder.com/750"},{"info":"olha uma raquete aqui"},{"preco":500000}]]
-
-
-document.querySelector("#darkmode").addEventListener("click", function(){
-    if(dark_state){
+const check = document.querySelector("#toggle")
+check.addEventListener("change", function(){
+    if(check.checked){
         document.querySelector("#color-scheme").content = "dark"
         document.querySelector(".logo").src = logos[1]
     }else{
         document.querySelector("#color-scheme").content = "light"
         document.querySelector(".logo").src = logos[0]
     }
-    dark_state = !dark_state
 })
 
 window.onload = (event) => {
     fetch(request).then((response) => response.json()).then((data) => data_upload(data))
-	//data_upload(arr)
 }
 
 //setInterval(function(){fetch(request).then((response) => response.json()).then((data) => data_upload(data))},1000)
@@ -46,7 +41,12 @@ function data_upload(data){
 }
 
 function button(id){
-    //TODO fazer o handeler dos botoes de compra
+    fetch(request).then((response) => response.json()).then((data) =>{
+        let item = data[id]
+        if(confirm(`Quer adicionar ${item.info} ao carrinho`)){
+            alert("Adicionado com sucesso")
+        }
+    })
 }
 
 
