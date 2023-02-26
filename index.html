@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Loja</title>
     <img src="https://cdn.shopify.com/s/files/1/0513/8425/4632/files/Logo_Quad_120x.png?v=1666882997" class="logo">
-    <div class="toggle">
-        <input type="checkbox" id="toggle">
-        <label for="toggle"></label>
-    </div>
-    <a onclick="carrinho_show()"><img class="carrinho" src="./126510.png" alt="Carrinho"></a>
-    <button onclick="window.location.href = '.'">Limpar Carrinho</button>
-    <div class="total">
-        <p class="numero">0 €</p>
+    <div class="wrapper">
+        <div class="toggle">
+            <input type="checkbox" id="toggle">
+            <label for="toggle"></label>
+        </div>
+        <a onclick="carrinho_show()"><img class="carrinho" src="./126510.png" alt="Carrinho"></a>
+        <button class="limpar" onclick="window.location.href = '.'">Limpar Carrinho</button>
+        <div class="total">
+            <p class="numero">0 €</p>
+        </div>
     </div>
     <hr class="top">
 </head>
