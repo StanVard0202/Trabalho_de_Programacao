@@ -63,9 +63,3 @@ function carrinho_show(){
         alert("Nada no carrinho")
     }
 }
-
-
-
-
-
-
