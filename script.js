@@ -1,16 +1,11 @@
 const produtos_div = document.querySelector("#produtos")
 const logos = ["https://cdn.shopify.com/s/files/1/0513/8425/4632/files/Logo_Quad_120x.png?v=1666882997","https://cdn.shopify.com/s/files/1/0513/8425/4632/files/Logo_Quad_white_120x.png?v=1666882950"]
-//const requestURL = "https://raw.githubusercontent.com/StanVard0202/Trabalho_de_Programacao/main/products.json"
-const requestURL = "./products.json"
+const requestURL = "products.json"
 const request = new Request(requestURL)
 var dark_state = true
 let carrinho = []
 let preco = 0
 
-
-const storage = sessionStorage
-
-let fundos = storage.getItem("fundos")
 const check = document.querySelector("#toggle")
 check.addEventListener("change", function(){
     if(check.checked){
