@@ -92,6 +92,15 @@ img.carrinho{
     height: 50px;
 }
 
+div.total{
+    position: absolute;
+    top: 15px;
+    right: 250px;
+    font-size: 20px;
+}
+
+
+
 div.sobre_container{
     display: flex;
     width: 90vw;

@@ -4,6 +4,9 @@ const logos = ["https://cdn.shopify.com/s/files/1/0513/8425/4632/files/Logo_Quad
 const requestURL = "./products.json"
 const request = new Request(requestURL)
 var dark_state = true
+let carrinho = []
+let preco = 0
+
 
 const storage = sessionStorage
 
@@ -13,9 +16,11 @@ check.addEventListener("change", function(){
     if(check.checked){
         document.querySelector("#color-scheme").content = "dark"
         document.querySelector(".logo").src = logos[1]
+        document.querySelector(".carrinho").src = "./126510_w.png"
     }else{
         document.querySelector("#color-scheme").content = "light"
         document.querySelector(".logo").src = logos[0]
+        document.querySelector(".carrinho").src = "./126510.png"
     }
 })
 
@@ -45,9 +50,26 @@ function button(id){
         let item = data[id]
         if(confirm(`Quer adicionar ${item.info} ao carrinho`)){
             alert("Adicionado com sucesso")
+            carrinho.push(item.info)
+            preco += item.preco
+            document.querySelector(".numero").innerHTML = new String(preco) + " €"
         }
     })
 }
+
+function carrinho_show(){
+    if(carrinho[0] != null){
+        let items = "No carrinho tem: \n"
+        carrinho.forEach(e => {
+            items += new String(new String(e) + "\n")
+        })
+        alert(items)
+    }else{
+        alert("Nada no carrinho")
+    }
+}
+
+
 
 
 
