@@ -157,6 +157,7 @@ div.produto{
     height: auto;
     width: calc(calc(96vw/ 3) - 20px);
     font-size: 20px;  
+    overflow: hidden;
 }
 
 div.produto > img:hover{
