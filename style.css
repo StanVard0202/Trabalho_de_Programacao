@@ -3,7 +3,6 @@
     --btn-color: #1DA1F2;
     --tamanho: 500px;
     font-family: Arial, Helvetica, sans-serif;
-    /*TODO POR OS NOMES DOS PRODUTOS EM MAIUSCULA*/
 }
 
 body{
@@ -163,6 +162,10 @@ div.produto{
 div.produto > img:hover{
     scale: 1.15;
     box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+}
+
+div.produto:has(img:hover){
+    overflow: visible;
 }
 
 div.produto > img{
