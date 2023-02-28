@@ -31,7 +31,7 @@ function data_upload(data){
     for (let i = 0; i < data.length; i++) {
         html+=`<div class='produto' id='${i}'>`
         html+=`<img src="${data[i].img}">`
-        html+=`<p class="infos">${data[i].info}</p>`
+        html+=`<p class="infos">${toUpperCase(new String(data[i].info))}</p>`
         html+=`<p id="preco">${data[i].preco}€</p>`
         html+=`<button class="compra" onclick="button(${i})">Comprar</button>`
         html+=`</div>`
