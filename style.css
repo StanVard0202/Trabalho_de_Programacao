@@ -168,7 +168,7 @@ div.produto > img{
     position: static;
     border-radius:  15px;
     margin-bottom: 0px;
-    height: 500px;
+    height: calc(calc(96vw/ 3) - 20px);
     width: calc(calc(96vw/ 3) - 20px);
 }
 
