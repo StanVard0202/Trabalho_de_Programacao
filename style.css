@@ -155,7 +155,7 @@ div.produto{
     border-radius: 15px;
     padding: 5px;
     height: auto;
-    width: calc(96vw/ 3);
+    width: calc(calc(96vw/ 3) - 20px);
     font-size: 20px;  
 }
 
@@ -168,8 +168,8 @@ div.produto > img{
     position: static;
     border-radius:  15px;
     margin-bottom: 0px;
-    height: calc(calc(96vw/ 3) - 20px);
-    width: calc(calc(96vw/ 3) - 20px);
+    height: calc(calc(96vw/ 3) - 30px);
+    width: calc(calc(96vw/ 3) - 30px);
 }
 
 button.compra{
