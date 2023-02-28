@@ -3,6 +3,7 @@
     --btn-color: #1DA1F2;
     --tamanho: 500px;
     font-family: Arial, Helvetica, sans-serif;
+    /*TODO POR OS NOMES DOS PRODUTOS EM MAIUSCULA*/
 }
 
 body{
@@ -137,8 +138,9 @@ div.sobre_container > img{
 
 div.produtos{
     display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 98vw;
     gap: 5px;
     /*border: 2px solid var(--main-color);*/
     border-radius: 25px;
@@ -153,7 +155,7 @@ div.produto{
     border-radius: 15px;
     padding: 5px;
     height: auto;
-    width: calc(97% / 3);
+    width: calc(96vw/ 3);
     font-size: 20px;  
 }
 
