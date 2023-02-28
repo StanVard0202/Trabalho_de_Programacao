@@ -47,7 +47,7 @@ function button(id){
             alert("Adicionado com sucesso")
             carrinho.push(item.info)
             preco += item.preco
-            document.querySelector(".numero").innerHTML = new String(preco) + " €"
+            document.querySelector(".numero").innerHTML = new String(new Int(preco)) + " €"
         }
     })
 }
