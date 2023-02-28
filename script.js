@@ -21,6 +21,7 @@ check.addEventListener("change", function(){
 
 window.onload = (event) => {
     fetch(request).then((response) => response.json()).then((data) => data_upload(data))
+    check.checked = false
 }
 
 //setInterval(function(){fetch(request).then((response) => response.json()).then((data) => data_upload(data))},1000)
