@@ -169,7 +169,7 @@ div.produto > img{
     border-radius:  15px;
     margin-bottom: 0px;
     height: 500px;
-    width: 500px;
+    width: calc(calc(96vw/ 3) - 20px);
 }
 
 button.compra{
