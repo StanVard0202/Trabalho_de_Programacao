@@ -125,7 +125,7 @@ div.sobre_container{
 }
 
 div.container > p ~ pre{
-    width: max-content;
+    width: 100%;
 }
 div.sobre_container > img{
     border-radius: 15px;
