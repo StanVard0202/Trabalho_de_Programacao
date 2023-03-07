@@ -32,7 +32,8 @@ h1{
 
 h2{
     font-size: 30px;
-    justify-content: center;
+    left: 50%;
+    right: 50%;
 }
 
 img.logo{
