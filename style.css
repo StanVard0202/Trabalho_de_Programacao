@@ -190,4 +190,5 @@ button.compra:focus{
     --cor:#146fac;
     border: var(--cor);
     background-color: var(--cor);
+    overflow: visible;
 }
