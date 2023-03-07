@@ -31,6 +31,7 @@ h1{
 */
 
 h2{
+    position: relative;
     font-size: 52.5px;
     padding: 0%;
     left: 50%;
