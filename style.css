@@ -33,12 +33,6 @@ img.logo{
     scale: 1.5;
 }
 
-h2{
-    text-align: center;
-    scale: 2;
-	margin-bottom:5vh;
-}
-
 .toggle{
     position: absolute;
     top: 20px;
