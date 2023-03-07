@@ -30,6 +30,11 @@ h1{
 }
 */
 
+h2{
+    font-size: 30px;
+    justify-content: center;
+}
+
 img.logo{
     margin: 20px;
     padding-left: 20px;
