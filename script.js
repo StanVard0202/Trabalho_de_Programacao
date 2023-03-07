@@ -43,12 +43,11 @@ function data_upload(data){
 
 function button(id){
     fetch(request).then((response) => response.json()).then((data) =>{
-        let item = data[id]
-        if(confirm(`Quer adicionar ${item.info} ao carrinho`)){
+        if(confirm(`Quer adicionar ${data[id].info} ao carrinho`)){
             alert("Adicionado com sucesso")
-            carrinho.push(item.info)
-            preco += item.preco
-            document.querySelector(".numero").innerHTML = new String(new Int(preco)) + " €"
+            carrinho.push(data[id].info)
+            preco += data[id].preco
+            document.querySelector(".numero").innerHTML = preco + " €"
         }
     })
 }
